@@ -108,6 +108,7 @@ export default function TheJourney() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.22 }}
+              className="text-center"
             >
               <p className="text-[5rem] md:text-[7rem] font-black leading-none text-off-white">
                 10<span className="text-jamaica-green">+</span>

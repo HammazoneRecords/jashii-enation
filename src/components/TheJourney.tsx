@@ -102,6 +102,21 @@ export default function TheJourney() {
               </p>
             </motion.div>
 
+            {/* Stat */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.22 }}
+            >
+              <p className="text-[5rem] md:text-[7rem] font-black leading-none text-off-white">
+                10<span className="text-jamaica-green">+</span>
+              </p>
+              <p className="font-mono text-sm tracking-[0.2em] uppercase text-off-white/60 mt-1">
+                Years as a Dancehall Champion
+              </p>
+            </motion.div>
+
             {/* 2001 Origins card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}

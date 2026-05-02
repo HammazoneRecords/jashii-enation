@@ -214,7 +214,7 @@ export default function Tracks() {
         <div className="flex gap-6 mt-12 text-sm font-mono uppercase tracking-widest">
           <a href="https://open.spotify.com/artist/4pP4fxW65oev1NdRd2Fbn7" target="_blank" rel="noopener noreferrer" className="hover:text-jamaica-green transition-colors">Spotify</a>
           <a href="https://music.apple.com/us/artist/jahshii/1574685516" target="_blank" rel="noopener noreferrer" className="hover:text-jamaica-green transition-colors">Apple Music</a>
-          <a href="https://www.youtube.com/@JahshiiMusic" target="_blank" rel="noopener noreferrer" className="hover:text-jamaica-green transition-colors">YouTube</a>
+          <a href="https://www.youtube.com/@JahshiiTV" target="_blank" rel="noopener noreferrer" className="hover:text-jamaica-green transition-colors">YouTube</a>
           <a href="https://www.instagram.com/jahshiimusic/" target="_blank" rel="noopener noreferrer" className="hover:text-jamaica-green transition-colors">Instagram</a>
         </div>
       </div>

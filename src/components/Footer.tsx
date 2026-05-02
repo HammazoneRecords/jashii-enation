@@ -19,7 +19,7 @@ export default function Footer() {
             <Instagram size={32} />
           </a>
           <a
-            href="https://www.youtube.com/@JahshiiMusic"
+            href="https://www.youtube.com/@JahshiiTV"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-jamaica-yellow transition-colors"
@@ -27,7 +27,7 @@ export default function Footer() {
             <Youtube size={32} />
           </a>
           <a
-            href="https://open.spotify.com/artist/5Lb81gbHkz3HOhNh0SDJgN"
+            href="https://open.spotify.com/artist/4pP4fxW65oev1NdRd2Fbn7"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-jamaica-yellow transition-colors"

@@ -19,8 +19,8 @@ const TRACKS: Track[] = [
   { id: 't-6',  title: '25/8',               year: '2023',                  youtubeId: 'YZ6z4_fvmao' },
   { id: 't-7',  title: 'Shift Change',       year: '2023',                  youtubeId: '28wbnPU1vEc' },
   { id: 't-8',  title: 'Pieces',             year: '2023', feat: 'Masicka', youtubeId: 'DT5XCNVwDzE' },
-  { id: 't-9',  title: 'Time Zone',          year: '2023',                  youtubeId: 'EHXez0_-c9A' },
-  { id: 't-10', title: 'Dream to Reality',   year: '2023' },
+  { id: 't-9',  title: 'Time Zone',          year: '2023' },
+  { id: 't-10', title: 'Dream to Reality',   year: '2023',                  youtubeId: 'EHXez0_-c9A' },
   { id: 't-11', title: 'Prosperity',         year: '2024',                  youtubeId: 'tkN8fg_BONU' },
 ];
 

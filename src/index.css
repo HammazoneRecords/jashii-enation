@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-jamaica-green: #007749;
+  --color-jamaica-yellow: #FED100;
+  --color-jamaica-black: #000000;
+  --color-off-white: #FDFBF7;
+
+  /* DNA exception palette — earth tones for brand extensions and accents */
+  --color-dna-ochre: #C8782A;
+  --color-dna-forest: #2D4A28;
+  --color-dna-ember: #8B3A0F;
+  --color-dna-linen: #E8DCC8;
+  --color-dna-midnight: #101010;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-off-white text-jamaica-black font-sans selection:bg-jamaica-yellow selection:text-jamaica-black;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tighter uppercase;
+  }
+}
+
+.text-stroke-green {
+  -webkit-text-stroke: 1px var(--color-jamaica-green);
+  color: transparent;
+}
+
+.text-stroke-yellow {
+  -webkit-text-stroke: 1px var(--color-jamaica-yellow);
+  color: transparent;
+}
+
+.text-stroke-ochre {
+  -webkit-text-stroke: 1px #C8782A;
+  color: transparent;
+}
+
+.bg-pattern {
+  background-image: radial-gradient(var(--color-jamaica-yellow) 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+}

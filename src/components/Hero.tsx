@@ -24,8 +24,22 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen pt-[4.5rem] flex flex-col md:flex-row overflow-hidden">
+
+      {/* Mobile-only video background — sits behind the text */}
+      <div className="md:hidden absolute inset-0 z-0">
+        <video
+          src="/jahshii-hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/30" />
+      </div>
+
       {/* Left Side: Typography */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 py-12 bg-off-white bg-pattern relative z-20">
+      <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 py-12 md:bg-off-white md:bg-pattern relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -34,7 +48,7 @@ export default function Hero() {
         >
           <motion.h1
             layout
-            className={`text-6xl sm:text-7xl lg:text-8xl leading-none mb-6 flex transition-all duration-1000 ease-in-out whitespace-nowrap overflow-hidden ${isMerged ? 'flex-row items-baseline' : 'flex-col items-start'}`}
+            className={`text-6xl sm:text-7xl lg:text-8xl leading-none mb-6 flex transition-all duration-1000 ease-in-out whitespace-nowrap overflow-hidden text-white md:text-jamaica-black ${isMerged ? 'flex-row items-baseline' : 'flex-col items-start'}`}
           >
             <motion.span layout variants={itemVariants} className="font-black">
               JAH
@@ -92,8 +106,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right Side: Video */}
-      <div className="w-full md:w-1/2 relative bg-jamaica-black z-10">
+      {/* Right Side: Video — desktop only */}
+      <div className="hidden md:block md:w-1/2 relative bg-jamaica-black z-10">
         <motion.div
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}

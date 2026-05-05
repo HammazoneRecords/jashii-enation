@@ -122,7 +122,8 @@ function MiniPlayer({ track, onClose }: MiniPlayerProps) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 60, scale: 0.96 }}
       transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
-      className="fixed bottom-6 right-6 z-[90] w-[320px] shadow-2xl shadow-black/40 overflow-hidden"
+      className="fixed bottom-6 right-6 z-[90] shadow-2xl shadow-black/40 overflow-hidden"
+      style={{ width: 'clamp(300px, 90vw, 520px)' }}
     >
       {/* Header */}
       <div className="bg-jamaica-black text-off-white flex items-center gap-3 px-3 py-2">
@@ -165,7 +166,7 @@ function MiniPlayer({ track, onClose }: MiniPlayerProps) {
           <motion.div
             key="video"
             initial={{ height: 0 }}
-            animate={{ height: 180 }}
+            animate={{ height: 292 }}
             exit={{ height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="overflow-hidden"
@@ -176,7 +177,7 @@ function MiniPlayer({ track, onClose }: MiniPlayerProps) {
               allow="autoplay; encrypted-media"
               allowFullScreen
               className="w-full block"
-              style={{ height: 180 }}
+              style={{ height: 292 }}
             />
           </motion.div>
         )}

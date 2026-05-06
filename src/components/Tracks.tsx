@@ -11,17 +11,29 @@ interface Track {
 }
 
 const TRACKS: Track[] = [
-  { id: 't-1',  title: 'Cream of the Crop', year: '2021', feat: 'Navaz',   youtubeId: 'lWkx2KbAeKc' },
-  { id: 't-2',  title: 'Keep Up',            year: '2021',                  youtubeId: '0QHemk0de_M' },
-  { id: 't-3',  title: 'Life Lessons',       year: '2021',                  youtubeId: 'DgoRJZfvecY' },
-  { id: 't-4',  title: 'Born Fighter',       year: '2022',                  youtubeId: 'pNPXC3TFJHQ' },
-  { id: 't-5',  title: 'Enemy State',        year: '2022',                  youtubeId: 'j8mBplHwRvA' },
-  { id: 't-6',  title: '25/8',               year: '2023',                  youtubeId: 'YZ6z4_fvmao' },
-  { id: 't-7',  title: 'Shift Change',       year: '2023',                  youtubeId: '28wbnPU1vEc' },
-  { id: 't-8',  title: 'Pieces',             year: '2023', feat: 'Masicka', youtubeId: 'DT5XCNVwDzE' },
-  { id: 't-9',  title: 'Time Zone',          year: '2023' },
-  { id: 't-10', title: 'Dream to Reality',   year: '2023',                  youtubeId: 'EHXez0_-c9A' },
-  { id: 't-11', title: 'Prosperity',         year: '2024',                  youtubeId: 'tkN8fg_BONU' },
+  { id: 't-1',  title: 'Cream of the Crop', year: '2021', feat: 'Navaz',        youtubeId: 'lWkx2KbAeKc' },
+  { id: 't-2',  title: 'Covid Curfew',      year: '2022',                        youtubeId: 'PpMO9RL5D34' },
+  { id: 't-3',  title: 'Keep Up',           year: '2021',                        youtubeId: '0QHemk0de_M' },
+  { id: 't-4',  title: 'Life Lessons',      year: '2021',                        youtubeId: 'wNoHmx30dK0' },
+  { id: 't-5',  title: 'Gvnman Town',       year: '2022',                        youtubeId: 'RmiAwKRd85E' },
+  { id: 't-6',  title: 'Media',             year: '2022',                        youtubeId: '8KDoNz9TkA0' },
+  { id: 't-7',  title: 'Born Fighter',      year: '2022',                        youtubeId: 'tC36OgebGXY' },
+  { id: 't-8',  title: 'Enemy State',       year: '2022',                        youtubeId: 'j8mBplHwRvA' },
+  { id: 't-9',  title: 'Energy',            year: '2022',                        youtubeId: 'V6hKDMrKoOI' },
+  { id: 't-10', title: 'Promise',           year: '2022',                        youtubeId: 'aLFCW48uJ08' },
+  { id: 't-11', title: 'Di Ting Mad',       year: '2023',                        youtubeId: 'Na_oQRNih8g' },
+  { id: 't-12', title: "God's Gift",        year: '2023', feat: 'Kim Kelly',     youtubeId: '96RhuIYwLmk' },
+  { id: 't-13', title: '25/8',              year: '2023',                        youtubeId: 'YZ6z4_fvmao' },
+  { id: 't-14', title: 'Shift Change',      year: '2023',                        youtubeId: '28wbnPU1vEc' },
+  { id: 't-15', title: 'Pieces',            year: '2023', feat: 'Masicka',       youtubeId: 'DT5XCNVwDzE' },
+  { id: 't-16', title: 'Stronger',          year: '2023',                        youtubeId: 'OM6yMcm0TSU' },
+  { id: 't-17', title: 'Dream to Reality',  year: '2023',                        youtubeId: 'EHXez0_-c9A' },
+  { id: 't-18', title: 'Prosperity',        year: '2024',                        youtubeId: 'tkN8fg_BONU' },
+  { id: 't-19', title: 'Dream',             year: '2024',                        youtubeId: '3nf5VeeOEng' },
+  { id: 't-20', title: 'Domino Gyallis',    year: '2024',                        youtubeId: 'tC2_QdVSUN8' },
+  { id: 't-21', title: 'Miggle Day',        year: '2024',                        youtubeId: 'NxCCn0n3VMM' },
+  { id: 't-22', title: 'Dem Nuh Bad',       year: '2024',                        youtubeId: 'zqqohrbJbSU' },
+  { id: 't-23', title: "God's Plan",        year: '2024', feat: 'Troublemekka',  youtubeId: 'ceT5986KhgA' },
 ];
 
 interface ActiveTrack {
@@ -110,7 +122,8 @@ function MiniPlayer({ track, onClose }: MiniPlayerProps) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 60, scale: 0.96 }}
       transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
-      className="fixed bottom-6 right-6 z-[90] w-[320px] shadow-2xl shadow-black/40 overflow-hidden"
+      className="fixed bottom-6 right-6 z-[90] shadow-2xl shadow-black/40 overflow-hidden"
+      style={{ width: 'clamp(300px, 90vw, 520px)' }}
     >
       {/* Header */}
       <div className="bg-jamaica-black text-off-white flex items-center gap-3 px-3 py-2">
@@ -153,7 +166,7 @@ function MiniPlayer({ track, onClose }: MiniPlayerProps) {
           <motion.div
             key="video"
             initial={{ height: 0 }}
-            animate={{ height: 180 }}
+            animate={{ height: 292 }}
             exit={{ height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="overflow-hidden"
@@ -164,7 +177,7 @@ function MiniPlayer({ track, onClose }: MiniPlayerProps) {
               allow="autoplay; encrypted-media"
               allowFullScreen
               className="w-full block"
-              style={{ height: 180 }}
+              style={{ height: 292 }}
             />
           </motion.div>
         )}

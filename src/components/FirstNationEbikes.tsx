@@ -7,6 +7,16 @@ const models = [
     colourway: 'Midnight + Ochre',
     hex: '#C8782A',
     tagline: 'Move through the earth with purpose.',
+    image: '/ebike3.png',
+    specs: [
+      { label: 'Motor',    value: '500W Mid-drive' },
+      { label: 'Range',    value: 'Up to 80 km' },
+      { label: 'Battery',  value: '48V 14Ah' },
+      { label: 'Top Speed', value: '35 km/h' },
+      { label: 'Gears',    value: '7-speed Shimano' },
+      { label: 'Brakes',   value: 'Hydraulic disc' },
+      { label: 'Weight',   value: '22 kg' },
+    ],
   },
   {
     name: '1st eNation Earth',
@@ -14,6 +24,16 @@ const models = [
     colourway: 'Forest + Linen',
     hex: '#2D4A28',
     tagline: 'Grounded in every direction.',
+    image: '/ebike1.png',
+    specs: [
+      { label: 'Motor',    value: '350W Hub-drive' },
+      { label: 'Range',    value: 'Up to 55 km' },
+      { label: 'Battery',  value: '36V 10Ah' },
+      { label: 'Top Speed', value: '28 km/h' },
+      { label: 'Frame',    value: 'Step-through steel' },
+      { label: 'Brakes',   value: 'Mechanical disc' },
+      { label: 'Weight',   value: '18 kg' },
+    ],
   },
   {
     name: '1st eNation Ember',
@@ -21,6 +41,16 @@ const models = [
     colourway: 'Ember + Black',
     hex: '#8B3A0F',
     tagline: 'Ancient consciousness. Clean energy.',
+    image: '/ebike2.png',
+    specs: [
+      { label: 'Motor',    value: '750W Mid-drive' },
+      { label: 'Range',    value: 'Up to 100 km' },
+      { label: 'Battery',  value: '48V 20Ah' },
+      { label: 'Top Speed', value: '45 km/h' },
+      { label: 'Gears',    value: '12-speed SRAM' },
+      { label: 'Brakes',   value: '4-piston hydraulic' },
+      { label: 'Weight',   value: '26 kg' },
+    ],
   },
 ];
 
@@ -64,22 +94,35 @@ export default function FirstNationEbikes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
-              className="border border-white/10 p-8 hover:border-white/30 transition-colors group"
+              className="border border-white/10 hover:border-white/30 transition-colors group overflow-hidden"
             >
-              {/* Colour swatch */}
-              <div
-                className="w-full h-2 mb-8 opacity-80"
-                style={{ background: `linear-gradient(to right, ${model.hex}, #101010)` }}
-              />
+              {/* Bike image — expands on hover */}
+              <div className="w-full bg-black/40 flex items-center justify-center overflow-hidden" style={{ minHeight: 260 }}>
+                <img
+                  src={model.image}
+                  alt={model.name}
+                  className="w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  style={{ maxHeight: 300 }}
+                />
+              </div>
 
-              <h3 className="text-2xl font-black mb-2 group-hover:text-[#C8782A] transition-colors">
-                {model.name}
-              </h3>
-              <p className="font-mono text-xs text-off-white/40 uppercase tracking-widest mb-4">
-                {model.colourway}
-              </p>
-              <p className="text-off-white/60 text-sm mb-6 leading-relaxed">{model.style}</p>
-              <p className="text-off-white/80 italic text-sm">"{model.tagline}"</p>
+              {/* Colour strip */}
+              <div className="w-full h-[2px]" style={{ background: `linear-gradient(to right, ${model.hex}, transparent)` }} />
+
+              {/* Name + specs */}
+              <div className="px-6 py-5">
+                <h3 className="text-lg font-black tracking-wide mb-4 group-hover:text-[#C8782A] transition-colors">
+                  {model.name}
+                </h3>
+                <div className="flex flex-col gap-2">
+                  {model.specs.map(s => (
+                    <div key={s.label} className="flex items-center justify-between gap-4">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-off-white/35">{s.label}</span>
+                      <span className="font-mono text-[11px] text-off-white/70">{s.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

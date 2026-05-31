@@ -7,18 +7,34 @@ import Tracks from './components/Tracks';
 import Footer from './components/Footer';
 import Shop from './pages/Shop';
 import FirstNationPage from './pages/FirstNation';
-import WorkingDraftBanner from './components/WorkingDraftBanner';
+
+function WorkingDraftBanner() {
+  return (
+    <div className="w-full bg-jamaica-black text-jamaica-yellow text-center text-xs font-mono tracking-widest uppercase py-2 px-4">
+      ⚠ Working Draft — This site is in development. To{' '}
+      <a
+        href="https://mindwaveja.com/marketplace/artist-digital-territory-license"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:text-white transition-colors"
+      >
+        purchase
+      </a>
+      {' '}this artist site, visit MindWave JA.
+    </div>
+  );
+}
 
 function MainPage() {
   return (
-    <div className="min-h-screen pb-10">
+    <div className="min-h-screen">
+      <WorkingDraftBanner />
       <Nav />
       <Hero />
       <PhotoStrip />
       <TheJourney />
       <Tracks />
       <Footer />
-      <WorkingDraftBanner artist="Jahshii" />
     </div>
   );
 }

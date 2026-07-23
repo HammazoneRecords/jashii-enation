@@ -20,7 +20,7 @@ function WorkingDraftBanner() {
       >
         purchase
       </a>
-      {' '}this artist site, visit MindWave JA.
+      {' '}this artist site.
     </div>
   );
 }
@@ -28,16 +28,20 @@ function WorkingDraftBanner() {
 function MainPage() {
   return (
     <div className="min-h-screen">
+      
       <WorkingDraftBanner />
       <Nav />
       <Hero />
       <PhotoStrip />
       <TheJourney />
       <Tracks />
+      
       <Footer />
     </div>
   );
 }
+
+
 
 export default function App() {
   return (

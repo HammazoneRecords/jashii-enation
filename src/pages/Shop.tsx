@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import PreOrderCapture from '../components/PreOrderCapture';
 
 const MERCH = [
   {
+    id: 'jahshii-dad-hat',
     name: 'Jahshii Music Dad Hat',
     description: 'Camo dad hat — embroidered Jahshii Music script on front.',
     tag: 'Headwear',
@@ -10,6 +12,7 @@ const MERCH = [
     status: 'available',
   },
   {
+    id: 'jahshii-racerback',
     name: '1st Nation Racerback Tank',
     description: 'Black racerback — 1st Nation Jamaica crest graphic.',
     tag: 'Apparel',
@@ -22,13 +25,11 @@ export default function Shop() {
   return (
     <div className="min-h-screen bg-off-white">
       {/* Working Draft Banner */}
-      <div className="w-full bg-jamaica-black text-jamaica-yellow text-center text-xs font-mono tracking-widest uppercase py-2 px-4">
-        ⚠ Working Draft — To{' '}
-        <a href="https://mindwaveja.com" target="_blank" rel="noopener noreferrer"
-          className="underline hover:text-white transition-colors">
-          purchase
-        </a>
-        {' '}this artist site, visit MindWave JA.
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-amber-500/10 border-t border-amber-500/20 px-4 py-2 flex items-center justify-center">
+        <p className="text-[10px] font-mono text-amber-400/80 uppercase tracking-widest text-center leading-relaxed">
+          Buyer assumes responsibility for clearing image &amp; likeness rights with Jahshii. This site or one like it is available for{' '}
+          <a href="https://mindwaveja.com/marketplace/artist-digital-territory-license" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-300 transition-colors">purchase</a>.
+        </p>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 py-24">
@@ -69,10 +70,7 @@ export default function Shop() {
                 <p className="text-jamaica-black/55 text-sm mb-6 leading-relaxed">{item.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs uppercase tracking-widest text-jamaica-black/40">Price on request</span>
-                  <button disabled
-                    className="bg-jamaica-black text-off-white font-black text-xs uppercase tracking-widest px-6 py-3 opacity-50 cursor-not-allowed">
-                    Order Now
-                  </button>
+                  <PreOrderCapture productId={item.id} />
                 </div>
               </div>
             </div>

@@ -24,12 +24,9 @@ export default function Nav() {
         </Link>
         <Link
           to="/shop"
-          className="relative border border-jamaica-black px-4 py-1 hover:bg-jamaica-black hover:text-off-white transition-colors"
+          className="border border-jamaica-black px-4 py-1 hover:bg-jamaica-black hover:text-off-white transition-colors"
         >
           Shop
-          <span className="absolute -top-2 -right-2 bg-dna-ochre text-off-white text-[8px] font-mono uppercase tracking-wider px-1.5 py-0.5 leading-none">
-            merch incl.
-          </span>
         </Link>
       </div>
 

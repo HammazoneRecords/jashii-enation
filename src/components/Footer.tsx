@@ -47,14 +47,6 @@ export default function Footer() {
         <div className="w-full flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 font-mono text-xs tracking-widest text-white/40 uppercase">
           <p>© 2025 Jahshii. All rights reserved.</p>
           <div className="flex gap-8 mt-6 md:mt-0">
-            <a
-              href="https://mindwaveja.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-off-white transition-colors"
-            >
-              Site by MindWave JA
-            </a>
           </div>
         </div>
       </div>

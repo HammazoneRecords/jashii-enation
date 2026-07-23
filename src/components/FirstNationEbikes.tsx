@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import PreOrderCapture from './PreOrderCapture';
 
 const models = [
   {
@@ -132,16 +133,19 @@ export default function FirstNationEbikes() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="flex flex-col items-center gap-6"
         >
-          <button
-            disabled
-            className="bg-[#C8782A]/20 text-[#C8782A] border border-[#C8782A]/40 px-12 py-5 font-black uppercase tracking-widest cursor-not-allowed opacity-60"
-          >
-            1st eNation — Coming Soon
-          </button>
-          <p className="font-mono text-xs text-off-white/30 mt-4 uppercase tracking-widest">
-            Launching 2025 — Join the Movement
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl">
+            {[
+              { id: 'jahshii-ebike-roots', label: 'Roots' },
+              { id: 'jahshii-ebike-earth', label: 'Earth' },
+              { id: 'jahshii-ebike-ember', label: 'Ember' },
+            ].map(m => (
+              <PreOrderCapture key={m.id} productId={m.id} />
+            ))}
+          </div>
+          <p className="font-mono text-xs text-off-white/30 mt-2 uppercase tracking-widest">
+            Launching 2025 — Register interest above
           </p>
         </motion.div>
       </div>

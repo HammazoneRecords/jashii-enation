@@ -4,6 +4,8 @@ RUN npm install -g pnpm@10.33.0
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY . .
+ARG VITE_INTEREST_API
+ENV VITE_INTEREST_API=$VITE_INTEREST_API
 RUN pnpm run build
 
 FROM nginx:alpine
